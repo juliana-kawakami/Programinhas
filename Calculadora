@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    float num1, num2, resultado;
+    char operador;
+    printf("Selecione a operacao: \n");
+    scanf("%c", &operador);
+    printf("Digite dois numeros:  \n");
+    scanf("%f %f", &num1, &num2);
+        if(operador == '+'){
+            resultado = num1 + num2;
+            printf("O resultado da soma é: %.2f", resultado);
+        }
+        else if(operador == '-'){
+            resultado = num1 - num2;
+            printf("O resultado da subtracao é: %.2f", resultado);
+        }
+        else if(operador == '*'){
+            resultado = num1 * num2;
+            printf("O resultado da multiplicacao é: %.2f", resultado);
+        }
+        else if(operador == '/'){
+            resultado = num1 / num2;
+            printf("O resultado da divisao é: %.2f", resultado);
+        }
+        else{
+            printf("Operador invalido.");
+        }
+
+    return 0;
+}
