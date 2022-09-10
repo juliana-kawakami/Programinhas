@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int anos, meses, dias, dias1, dias2, diastotais;
+    printf("Digite, respectivamente, quantos anos, meses e dias que você tem: \n");
+    scanf("%d %d %d", &anos, &meses, &dias);
+    dias1 = 365 * anos;
+    //transformando anos em dias...
+    dias2 = 30 * meses;
+    //transformando meses em dias...
+    diastotais = dias1 + dias2 + dias;
+    
+    printf("%d anos, %d meses e %d dias é igual a %d dias", anos, meses, dias, diastotais);
+    return 0;
+}
+
+//Este é um algoritmo que transforma os anos, meses e dias em dias e imprime a idade em dias da pessoa.
+//Considerando que 1 ano tem 365 dias e que 1 mês tem 30 dias.
