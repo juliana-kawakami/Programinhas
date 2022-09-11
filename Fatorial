@@ -1,0 +1,18 @@
+//Este é um algoritmo que calcula o fatorial de um número lido.
+
+#include <stdio.h>
+
+int main()
+{
+    int num, fatorial=1;
+    printf("Digite um número: \n");
+    scanf("%d", &num);
+    int i=num;
+    while(num != 1){
+        fatorial = fatorial * num;
+        num--;
+    }
+    printf("O fatorial de %d é %d", i, fatorial);
+    
+    return 0;
+}
