@@ -1,0 +1,15 @@
+//Este é um programa para calcular o novo salário de um funcionário.
+//Ele lê o valor do salário atual, o reajuste e reaiza o cálculo.
+#include <stdio.h>
+
+int main()
+{
+    float SalarioAntigo, SalarioNovo, Reajuste;
+    printf("Digite o valor do seu salário:  \n");
+    scanf("%f", &SalarioAntigo);
+    printf("Digite o percentual do reajuste:  \n");
+    scanf("%f", &Reajuste);
+    SalarioNovo= (float)(SalarioAntigo*(100+Reajuste))/100;
+    printf("O seu salário novo é: %.2f", SalarioNovo);
+    return 0;
+}
