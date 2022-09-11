@@ -1,0 +1,23 @@
+//Este é um programa que lê 10 números e imprime a quantidade de números positivos ou nulos e negativos.
+#include <stdio.h>
+
+int main(){
+    int num, positivo, negativo, i;
+    i=1; negativo=0, positivo=0;
+    while(i<=10){
+        printf("Digite um número positivo ou negativo: \n");
+        scanf("%d", &num);
+            if(num>=0){
+                printf("Você escolheu um número positivo ou nulo. \n");
+                positivo ++;
+            }
+            else{
+                printf("Você digitou um número negativo. \n");
+                negativo++;
+            }
+        i++;
+    }
+    printf("Você digitou %d números negativos  \n", negativo);
+    printf("Você digitou %d números positivos ou nulos", positivo);
+    return 0;
+}
