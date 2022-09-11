@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int nEleitores, nVotosBrancos, nVotosNulos, nVotosValidos;
+    scanf("%d %d %d %d", &nEleitores, &nVotosBrancos, &nVotosNulos, &nVotosValidos);
+    float PorcBrancos, PorcNulos, PorcValidos;
+    PorcBrancos = (float)(nVotosBrancos*100)/nEleitores;
+    PorcNulos = (float)(nVotosNulos*100)/nEleitores;
+    PorcValidos = (float)(nVotosValidos*100)/nEleitores;
+    printf("A porcentagem de votos brancos e %.2f, a de votos nulos e %.2f e a de votos validos e %.2f", PorcBrancos,PorcNulos, PorcValidos);
+    return 0;
+}
+
+//Peça para o usuário digitar os números de eleitores, votos brancos, nulos e válidos;
+//Faça a porcentagem dos votos brancos, nulos e válidos. 
