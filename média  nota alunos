@@ -1,0 +1,18 @@
+//Este é um programa que lê um número de alunos e calcula a média das notas.
+#include <stdio.h>
+
+int main()
+{
+    int nAlunos; float nota, SomaNota, media;
+    printf("Digite quantos alunos há na turma: \n");
+    scanf("%d", &nAlunos);
+    int i=1; SomaNota=0;
+    while (i<=nAlunos){
+        printf("Digite a nota do aluno: \n");
+        scanf("%f", &nota);
+        SomaNota = SomaNota + nota;
+        i++;}
+    media = SomaNota / nAlunos;
+    printf("A media dos %d alunos é %.2f", nAlunos, media);
+    return 0;
+}
