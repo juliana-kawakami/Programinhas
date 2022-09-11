@@ -1,3 +1,4 @@
+//(versão 1):
 #include <stdio.h>
 
 int main()
@@ -14,6 +15,28 @@ int main()
         printf("%dx8= %d  \n", i, i*8);
         printf("%dx9= %d  \n", i, i*9);
         printf("%dx10= %d  \n", i, i*10);
+        i++;
+    }
+    printf("Fim da tabuada!");
+    
+    return 0;
+}
+
+
+
+//(versão 2):
+#include <stdio.h>
+
+int main()
+{
+    int i=1;
+    int b;
+    while (i<=10){
+        b=1;
+        while(b<=10){
+            printf("%d x %d = %d  \n", i, b, i*b);
+            b++;
+        }
         i++;
     }
     printf("Fim da tabuada!");
