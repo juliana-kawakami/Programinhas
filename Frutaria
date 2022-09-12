@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    float KgMor=0, KgMac=0, PrecoMor=0, PrecoMac=0;
+    printf("Digite quantos kilos de morango você quer: \n");
+    scanf("%f", &KgMor);
+    if(KgMor<=5){
+        PrecoMor=KgMor * 25 /10;
+    }
+    else if(KgMor>5){
+        PrecoMor=KgMor * 22 / 10;
+    }
+    printf("Digite quantos kilos de maçã você quer: \n");
+    scanf("%f", &KgMac);
+    if(KgMac<=5){
+        PrecoMac=KgMac * 18 / 10;
+    }
+    else if(KgMac>5){
+        PrecoMac=KgMac * 15 / 10;
+    }
+    float KgTotal, PrecoTotal, PrecoDesc;
+    KgTotal=KgMac+KgMor;
+    PrecoTotal=PrecoMac+PrecoMor;
+    if((KgTotal>8)||(PrecoTotal>25)){
+        PrecoTotal= PrecoTotal- PrecoTotal * 10 /100;
+        printf("O preço com desconto será de %.2f", PrecoTotal);
+    }
+    else{
+        printf("O preço da compra será de %.2f", PrecoTotal);
+    }
+    return 0;
+}
