@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 //Programa que armazena a quantidade de produtos em um estoque;
 //(produto 0, produto 1, ...);
