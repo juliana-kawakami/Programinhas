@@ -4,18 +4,18 @@
 //Fornece a quantidade de produtos no estoque;
 //E fornece qual é o produto com maior quantidade.
 
+
 #include <stdio.h>
 
 int main()
 {
-    int produtos[9];
+    int produtos[5];
     int soma = 0;
     int produtoMaior = 0;
     int posicao = 0;
-    for(int i = 0;i <= 9; i++){
-        printf("Digite a quantidade de produtos no estoque:\n");
+    for(int i = 0;i < 5; i++){
+        printf("Digite a quantidade do produto %d no estoque:\n", i);
         scanf("%d", &produtos[i]);
-        printf("O valor digitado foi %d \n", produtos[i]);
         soma = soma + produtos[i];
     
         if(produtos[i]>produtoMaior){
@@ -27,6 +27,6 @@ int main()
     printf("A soma dos produtos do estoque deu %d  \n", soma);
     
     
-    printf("O produto com maior quantidade é: %d", posicao);
+    printf("O produto com maior quantidade é o produto %d", posicao);
     return 0;
 }
