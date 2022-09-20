@@ -1,20 +1,33 @@
 #include <stdio.h>
 
-//Programa que armazena a quantidade de produtos em um estoque
-//(produto 0, produto 1, ...)
-//e fornece a quantidade de produtos no estoque.
+//Programa que armazena a quantidade de produtos em um estoque;
+//(produto 0, produto 1, ...);
+//Fornece a quantidade de produtos no estoque;
+//E fornece qual é o produto com maior quantidade.
+
+#include <stdio.h>
 
 int main()
 {
     int produtos[9];
-    int soma;
-    for(int i = 0, soma = 0;i <= 9; i++){
+    int soma = 0;
+    int produtoMaior = 0;
+    int posicao = 0;
+    for(int i = 0;i <= 9; i++){
         printf("Digite a quantidade de produtos no estoque:\n");
         scanf("%d", &produtos[i]);
         printf("O valor digitado foi %d \n", produtos[i]);
         soma = soma + produtos[i];
-    }
-    printf("A soma dos produtos do estoque deu %d", soma);
+    
+        if(produtos[i]>produtoMaior){
+            produtoMaior = produtos[i];
+            posicao = i;
 
+        }
+    }
+    printf("A soma dos produtos do estoque deu %d  \n", soma);
+    
+    
+    printf("O produto com maior quantidade é: %d", posicao);
     return 0;
 }
