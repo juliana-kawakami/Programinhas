@@ -1,3 +1,7 @@
+//Programa que calcula o preço da compra de duas frutas: Morango e Maçã;
+//Se o cliente comprar mais de 8kgs ou mais de 25 reais, ele ganha 10% de desconto;
+//Se o cliente comprar mais de 5kgs de um produto (ou morango ou maçã), receberá um valor menor por kg;
+
 #include <stdio.h>
 
 int main()
