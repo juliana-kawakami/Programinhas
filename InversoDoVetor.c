@@ -22,3 +22,36 @@ int main()
     }
     return 0;
 }
+
+
+//versão 2;
+
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+    int vetor[6];
+    int aux = 0;
+    
+    int i;
+    
+    for(i=0; i<=4; i++){
+        printf("Digite um número: \n");
+        scanf("%d", &vetor[i]);
+    }
+    
+    /*for(i=0; i<4; i++){
+        aux = vetor[i];
+        vetor[i] = vetor[4-i];
+        vetor[4-i] = aux;
+        
+    }*/
+    
+    for(i=4; i>=0; i--){
+    printf("%d\t", vetor[i]);
+    }
+    return 0;
+}
