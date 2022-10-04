@@ -1,7 +1,3 @@
-/*Dados 3 números inteiros (LA, LB, LC), verificar se estes números formam um
-triângulo, isto é, verificar se cada um dos lados de um triângulo é menor que a soma dos
-outros dois lados.*/
-
 #include <stdio.h>
 #include <math.h>
 
@@ -39,7 +35,7 @@ int main()
                 
                 area = sqrt(S*(S-LA)*(S-LB)*(S-LC));
                 
-                printf("A area do triangulo é %.2f \n", area);
+                printf("A area do triangulo eh %.2f. \n", area);
                 
                 int MaiorL, L1, L2;
                 
@@ -56,9 +52,43 @@ int main()
                         }
                     }
                 }
-                else if(LB>LA)
+                else{
+                    if(LA>LC){
+                        MaiorL = LB;
+                        L1 = LC;
+                        L2 = LA;
+                    }
+                    else{
+                        if(LB>LC){
+                            MaiorL = LB;
+                            L1 = LC;
+                            L2 = LA;
+                        }
+                        else{
+                            MaiorL = LC;
+                            L1 = LB;
+                            L2 = LA;
+                        }
+                    }
+                }
                 
+                printf("O maior lado eh %d.  \n", MaiorL);
                 
+                int A, B, C;
+                
+                A = MaiorL*MaiorL;
+                B = L1*L1;
+                C = L2*L2;
+                
+                if(A==B+C){
+                    printf("O triangulo eh retangulo!");
+                }
+                else if(A>B+C){
+                    printf("O triangulo eh obtusangulo!");
+                }
+                else{
+                    printf("O triangulo eh acutangulo!");
+                }
                 
             }
             else{
@@ -72,8 +102,5 @@ int main()
     else{
         printf("Os lados digitados não formam um triangulo!\n");
     }
-    
-    
-    
     return 0;
 }
