@@ -4,7 +4,7 @@
 int main()
 {
     int LA=0, LB=0, LC=0;
-    float area, X;
+    float area;
     float S;
     
     printf("Digite um numero inteiro positivo para o lado A:");
@@ -31,7 +31,7 @@ int main()
             if(LC<LA+LB){
                 printf("Os lados digitados formam um triangulo!\n");
                 
-                S = (LA+LB+LC) / 2;
+                S = (float) (LA+LB+LC) / 2;
                 
                 area = sqrt(S*(S-LA)*(S-LB)*(S-LC));
                 
