@@ -98,19 +98,17 @@ int main(){
 	/*Aprovado ou reprovado*/
 	struct alunosAlgoritmos aprovados[QTDALUNOS];
 	struct alunosAlgoritmos reprovados[QTDALUNOS];
-	int aprovados=0;
-	int reprovados=0;
+	int alunosAprovados=0;
+	int alunosReprovados=0;
 	for(i=0; i<QTDALUNOS; i++){
 	    if(registro[i].media>=6.0){
-	        registro[i].Nome = aprovados[i].Nome;
-	        registro[i].media = aprovados[i].media;
-	        aprovados++;
+	        aprovados[i] = registro[i];
+	        alunosAprovados++;
 	        
 	    }
 	    else{
-	        registro[i].Nome = aprovados[i].Nome;
-	        registro[i].media = aprovados[i].media;
-	        reprovados++;
+	        aprovados[i] = registro[i];
+	        alunosReprovados++;
 	    }
 	
 	}
@@ -120,12 +118,13 @@ int main(){
 	        printf("APROVADO: \n");
             printf("Nome: %s \n", aprovados[i].Nome);
             printf("Media: %.2f \n", aprovados[i].media);
-            aprovados--;
+            alunosAprovados--;
 	    }
-	    else{
+	    while(reprovados>0){
 	        printf("REPROVADO: \n");
             printf("Nome: %s \n", reprovados[i].Nome);
             printf("Media: %.2f \n", reprovados[i].media);
+            alunosReprovados--;
 	    }
 	
 	}
